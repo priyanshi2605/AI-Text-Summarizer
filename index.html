@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AI Text Summarizer App</title> 
+    <link rel="stylesheet" href="stylesheet.css">   
+  </head>
+  <body>
+    <h1>AI Text Summarizer App</h1>
+    <p>Welcome to the AI Text Summarizer App! This app leverages the power of Artificial Intelligence APIs to provide concise summaries of long texts. Whether you have a lengthy article, research paper, or any other text document that you want to summarize quickly, our app can assist you.</p>
+    <p>Simply paste your text into the text area below and click the "Submit" button.</p>
+    
+    <!-- Demo Button -->
+    <button id="demo-button" class="submit-button">Insert Sample Text</button>
+
+    <div class="container">
+      <div class="text-box">
+        <textarea id="text_to_summarize" name="text_to_summarize" placeholder="Paste in some text to summarize. (Min length is 200 chars. Max length is 100,000 chars.)" maxlength="100000"></textarea>
+        <button id="submit-button" class="submit-button">
+          <span class="submit-button-text">Summarize</span>
+        </button>
+      </div>
+      <div class="text-box"> 
+        <textarea id="summary" name="summarized_text" placeholder="Summarized text will appear here"></textarea>
+        <img id="generatedImage" src="" alt="Generated Image" />
+      </div>
+    </div>
+
+    <!-- Personalized Section with Image -->
+    <section class="cta-section">
+      <div class="cta-content">
+        <div class="cta-text">
+          <h2>Maximize Your Efficiency</h2>
+          <p>This tool is designed to help you effortlessly process large volumes of text. Whether you’re preparing for exams or working on a project, our summarizer is here to support your success.</p>
+          <h3 style="font-size: 16px; margin: 10px 0;">💡 Fun Fact:</h3>
+          <p style="font-size: 17px; text-align: center;">"Did you know that the average person spends about 30% of their reading time looking for information? With our summarizer, you can reduce that time significantly!"</p>
+        </div>
+        <img src="images/learning.png" alt="Learning Image">
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+      // Demo Button Functionality
+      document.getElementById('demo-button').addEventListener('click', function() {
+          const sampleText = "Artificial intelligence is transforming industries by providing insights, automation, and enhanced decision-making capabilities.";
+          document.getElementById('text_to_summarize').value = sampleText; // Insert sample text
+      });
+    </script>
+  </body>
+</html>
